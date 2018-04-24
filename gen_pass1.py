@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 #
-# Generate a random word on randomwordgenerator.com
+# Generate a random word from thefreedictionary.com
 # Scrape the word and create a password with the
 # minimum complexity requirements
 # Louis Scianni
