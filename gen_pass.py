@@ -15,21 +15,22 @@ import os
 from sys import argv
 
 def make_pass():
-    spreadsheet = argv[1]                                                               # get our spreadsheet file from commandline argunemt
-    sp_char = ['!', '@', '#', '$', '%', '^', '&', '*']                                  # an array of special characters
-    rand_digit = random.randint(0, 9)                                                   # get random number between 0 and 9
-    cells = random.randint(0, 200)                                                      # randomly choose a cell from csv file
+    spreadsheet = argv[1]                     # get our spreadsheet file from command line argument
+    sp_char = ['!', '@', '#', '$', '%', '^', '&', '*', '/', '\\', '<', '>', '(', ')', '+', '_', '-', '='] # an array of special characters
+    rand_digit = random.randint(0, 10)                                                   # get random number between 0 and 9
+    cells = random.randint(0, 201)                                                      # randomly choose a cell from csv file
     
     wb = openpyxl.load_workbook(spreadsheet)   # open the file                          
     sheet = wb.get_sheet_by_name('Sheet1')     # select the sheet we are going to use
 
-    spchar = sp_char[random.randint(0, 7)]     # choose a random integer
+    #spchar = sp_char[random.randint(0, len(sp_char))]     # choose a random integer
         
     word = sheet['A%s' % cells].value          # choose a random word
-    cap_word = word.title()#word.replace(word[0], word[0].upper()) # capatilize the letter
+    cap_word = word.title()#word.replace(word[0], word[0].upper()) # capitalize the letter
  
     
         
-    print('%s%s%d' % (cap_word, spchar, rand_digit)) # print the word
+    print('%s%s%d' % (cap_word, spchar[random.randint(0, len(sp_char))], rand_digit)) # print the word
 
-make_pass()  # call our function
+if __name__ == '__main__':
+    make_pass()  # call our function
