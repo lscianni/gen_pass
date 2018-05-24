@@ -6,7 +6,7 @@
 # Louis Scianni
 # 04/24/2018
 
-import requests, random, openpyxl, os
+import requests
 from lxml import html
 
 
