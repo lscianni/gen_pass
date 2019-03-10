@@ -7,6 +7,8 @@
   and one integer
   11/14/2017
   Louis Scianni
+
+  released under GPL-v2
 """
 
 import openpyxl

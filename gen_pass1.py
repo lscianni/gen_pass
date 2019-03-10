@@ -4,6 +4,7 @@
 # minimum complexity requirements
 #
 # Louis Scianni
+# Released under the GPL-v2
 # 04/24/2018
 
 import requests, random
